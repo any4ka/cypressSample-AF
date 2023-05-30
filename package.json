@@ -1,0 +1,14 @@
+{
+  "name": "cypresssample-af",
+  "version": "1.0.0",
+  "description": "sample cypress framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Anna Finch",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.13.0"
+  }
+}
