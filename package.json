@@ -9,6 +9,8 @@
   "author": "Anna Finch",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.13.0"
+    "chai-json-schema": "^1.5.1",
+    "cypress": "^12.13.0",
+    "npm": "^9.6.7"
   }
 }
