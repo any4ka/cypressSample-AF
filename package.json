@@ -4,13 +4,22 @@
   "description": "sample cypress framework",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "cy:run": "cypress run --env allure=true",
+    "clean:folders": "rm -R -f allure-report/* && rm -R -f allure-results/*",
+    "allure:report": "yarn run allure generate allure-results  --clean -o allure-report && allure open allure-report",
+    "beforetest": "npm run clean:folders",
+    "tests": "npm run cy:run || npm run aftertest",
+    "aftertest": "npm run allure:report"
   },
   "author": "Anna Finch",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.39.1",
     "chai-json-schema": "^1.5.1",
     "cypress": "^12.13.0",
-    "npm": "^9.6.7"
+    "npm": "^9.6.7",
+    "mocha-allure-reporter": "^1.4.0",
+    "allure-commandline": "^2.17.2"
   }
 }
